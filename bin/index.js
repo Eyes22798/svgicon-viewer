@@ -30,7 +30,10 @@ const svgFilePath = path.isAbsolute(args.svgFilePath)
   let icons = []
   for (let i = 0; i < files.length; i++) {
     let filename = files[i]
-    icons.push(path.parse(filename).name)
+    icons.push({
+      name: path.parse(filename).name,
+      path: files[i]
+    })
   }
 
   const execa = function (command) {

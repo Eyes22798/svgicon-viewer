@@ -1,4 +1,4 @@
-export type IconMeta = Array<string>
+export type IconMeta = Array<Record<string, string>>
 
 declare global {
     interface Window {

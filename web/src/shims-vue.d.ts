@@ -4,3 +4,5 @@ declare module '*.vue' {
 }
 
 declare module '@eyes22798/svg-icon'
+
+declare module 'vuesax'
