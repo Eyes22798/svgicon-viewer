@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <aside>
-      <Left :icons="icons" @left-change="handleLeftChange" />
+      <Left :icons="icons" :allIcons="allIcons" @left-change="handleLeftChange" />
     </aside>
 
     <main>
@@ -29,6 +29,7 @@ import iconList from "./meta";
 export default class App extends Vue {
   query = ''
   group: Array<any> = []
+  allIcons: Array<any> = [...iconList]
   get icons() {
     if (this.query) {
       return iconList.filter((v) => {

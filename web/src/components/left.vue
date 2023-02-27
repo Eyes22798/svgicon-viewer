@@ -1,7 +1,7 @@
 <template>
   <div class="hidden">
     <vs-sidebar absolute v-model="active" open>
-      <vs-sidebar-item id="home"> 全部（{{ icons.length }}） </vs-sidebar-item>
+      <vs-sidebar-item id="home"> 全部（{{ allIcons.length }}） </vs-sidebar-item>
       <vs-sidebar-item v-for="(key, index) in Object.keys(groups)" :key="index" :id="key">{{ key }} （{{ groups[key].length }}）</vs-sidebar-item>
     </vs-sidebar>
   </div>
@@ -15,6 +15,7 @@ import { Component, Vue, Prop, Watch } from "vue-property-decorator";
 })
 export default class App extends Vue {
   @Prop() icons!: Array<Record<string, string>>;
+  @Prop() allIcons!: Array<Record<string, string>>;
   active = "home";
 
   get groups() {
@@ -34,7 +35,7 @@ export default class App extends Vue {
       return result;
     };
 
-    return groupByDirectory(this.icons);
+    return groupByDirectory(this.allIcons);
   }
 
   @Watch('active')
