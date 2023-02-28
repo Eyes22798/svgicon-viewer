@@ -1,14 +1,24 @@
 {
   "name": "@eyes22798/svgicon-viewer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "svgicon view",
   "bin": {
     "svgicon-viewer": "bin/index.js"
   },
-  "main": "index.js",
+  "main": "bin/index.js",
+  "files": [
+    "bin",
+    "dist"
+  ],
   "scripts": {
     "build": "node ./scripts/build.js",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build",
+    "release": "standard-version -a",
+    "major": "standard-version --release-as major",
+    "minor": "standard-version --release-as minor",
+    "patch": "standard-version --release-as patch",
+    "alpha": "standard-version --prerelease alpha",
+    "beta": "standard-version --prerelease beta"
   },
   "keywords": [
     "vue",
@@ -24,5 +34,12 @@
     "glob": "7.1.6",
     "portfinder": "1.0.28",
     "yargs": "13.2.1"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "devDependencies": {
+    "standard-version": "^9.5.0"
   }
 }
