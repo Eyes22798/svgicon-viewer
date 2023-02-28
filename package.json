@@ -6,13 +6,8 @@
     "svgicon-viewer": "bin/index.js"
   },
   "main": "bin/index.js",
-  "files": [
-    "bin",
-    "dist"
-  ],
   "scripts": {
     "build": "node ./scripts/build.js",
-    "prepublishOnly": "yarn build",
     "release": "standard-version -a",
     "major": "standard-version --release-as major",
     "minor": "standard-version --release-as minor",
