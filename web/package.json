@@ -6,12 +6,14 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "clean": "rimraf ../dist ./node_modules"
   },
   "dependencies": {
     "@eyes22798/svg-icon": "^0.0.12",
     "clipboard": "^2.0.11",
     "core-js": "^3.8.3",
+    "rimraf": "^4.1.2",
     "vue": "^2.6.14",
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^9.1.2",

@@ -44,6 +44,7 @@ const svgFilePath = path.isAbsolute(args.svgFilePath)
   }
 
   process.chdir(path.join(__dirname, '../web'))
+  execa('yarn clean')
   execa('yarn')
   execa(`yarn build --path=${svgFilePath}`)
 
@@ -56,5 +57,6 @@ const svgFilePath = path.isAbsolute(args.svgFilePath)
     'utf8'
   )
   html = html.replace(injectReg, injectCode)
+  console.clear()
   serve(html)
 })()
