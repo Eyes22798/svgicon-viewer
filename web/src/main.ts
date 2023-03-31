@@ -8,6 +8,7 @@ Vue.config.productionTip = false
 Vue.use(SvgIcon)
 Vue.use(Vuesax)
 
+document.title = 'svgicon viewer'
 new Vue({
   render: h => h(App),
 }).$mount('#app')
