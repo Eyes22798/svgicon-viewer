@@ -16,5 +16,13 @@ In your main.js file:
 svgicon-viewer ./src/assets/svg
 ```
 
+> What can you do
+
+- [x] Search by svg file name 🔍
+- [x] Copy the svg name 📝
+- [x] Group by folder 💼
+- [ ] Preview 
+
 ### Customize configuration
+
 See [Configuration Reference](https://cli.vuejs.org/config/).
