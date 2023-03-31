@@ -1,6 +1,8 @@
 # SVG PREVIEW
 Preview SVG files from any folder
 
+<img decoding="async" src="https://github.com/Eyes22798/svgicon-viewer/blob/main/assets/preview.png">
+
 ## Installation
 Using NPM:
 ```shell
