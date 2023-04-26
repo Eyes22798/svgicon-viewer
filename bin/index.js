@@ -5,8 +5,7 @@ const path = require('path')
 const fs = require('fs')
 const glob = require('glob')
 const serve = require('./serve')
-
-const exec = require('child_process').execSync
+const execa = require('execa')
 
 const args = yargs
   .usage(
@@ -36,17 +35,11 @@ const svgFilePath = path.isAbsolute(args.svgFilePath)
     })
   }
 
-  const execa = function (command) {
-    exec(command, {
-      stdio: 'inherit',
-      env: process.env
-    })
-  }
-
+  const run = (bin, args, opts = {}) => execa(bin, args, { stdio: 'inherit', env: process.env, ...opts })
   process.chdir(path.join(__dirname, '../web'))
-  execa('yarn clean')
-  execa('yarn')
-  execa(`yarn build --path=${svgFilePath}`)
+  await run('yarn', ['clean'])
+  await run('yarn')
+  await run('yarn', ['build', `--path=${svgFilePath}`])
 
   const injectCode = `
     window.icons = ${JSON.stringify(icons || [])}
