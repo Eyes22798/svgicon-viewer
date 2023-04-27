@@ -1,13 +1,10 @@
 const path = require('path')
-const exec = require('child_process').execSync
+const execa = require('execa')
 
-const execa = function (command) {
-  exec(command, {
-    stdio: 'inherit',
-    env: process.env
-  })
-}
-
+const run = (bin, args, opts = {}) => execa(bin, args, { stdio: 'inherit', env: process.env, ...opts })
 process.chdir(path.join(__dirname, '../web'))
-execa('yarn')
-execa('yarn build')
+run('yarn', ['clean']).then(() => {
+  run('yarn').then(() => {
+    run('yarn', ['build'])
+  })
+})
