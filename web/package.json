@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "clean": "rimraf ../dist ./node_modules"
+    "clean": "rimraf ../dist"
   },
   "dependencies": {
     "@eyes22798/svg-icon": "^0.0.12",
