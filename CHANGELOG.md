@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.10](https://github.com/Eyes22798/svgicon-viewer/compare/v0.0.9...v0.0.10) (2023-04-27)
+
+
+### Bug Fixes
+
+* yarn clean error ([6fbf7c2](https://github.com/Eyes22798/svgicon-viewer/commit/6fbf7c228ba5e9625571f3160ea2cdffa3f88d5e))
+
 ### [0.0.9](https://github.com/Eyes22798/svgicon-viewer/compare/v0.0.8...v0.0.9) (2023-04-27)
 
 
