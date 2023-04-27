@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.11](https://github.com/Eyes22798/svgicon-viewer/compare/v0.0.10...v0.0.11) (2023-04-27)
+
+
+### Bug Fixes
+
+* clean script error ([ca131d1](https://github.com/Eyes22798/svgicon-viewer/commit/ca131d11ab03f775fa0a13c24b145b422f5172b4))
+* pkg clean script ([84e7994](https://github.com/Eyes22798/svgicon-viewer/commit/84e7994bf43d93f17c98e66f2da275c2494daba4))
+
 ### [0.0.10](https://github.com/Eyes22798/svgicon-viewer/compare/v0.0.9...v0.0.10) (2023-04-27)
 
 
