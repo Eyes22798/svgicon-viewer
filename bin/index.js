@@ -36,8 +36,9 @@ const svgFilePath = path.isAbsolute(args.svgFilePath)
   }
 
   const run = (bin, args, opts = {}) => execa(bin, args, { stdio: 'inherit', env: process.env, ...opts })
-  process.chdir(path.join(__dirname, '../web'))
   await run('yarn', ['clean'])
+  
+  process.chdir(path.join(__dirname, '../web'))
   await run('yarn')
   await run('yarn', ['build', `--path=${svgFilePath}`])
 

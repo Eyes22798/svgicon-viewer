@@ -6,8 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint",
-    "clean": "rimraf ../dist"
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "@eyes22798/svg-icon": "^0.0.12",

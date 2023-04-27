@@ -7,7 +7,8 @@
   },
   "main": "bin/index.js",
   "scripts": {
-    "build": "rimraf ./dist ./web/node_modules && node ./scripts/build.js",
+    "build": "clean && node ./scripts/build.js",
+    "clean": "rimraf ./dist ./web/node_modules",
     "release": "standard-version -a",
     "major": "standard-version --release-as major",
     "minor": "standard-version --release-as minor",
