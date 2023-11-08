@@ -18,7 +18,6 @@
 import { Component, Vue } from "vue-property-decorator";
 import IconList from "./components/icon-list.vue";
 import Left from "./components/left.vue";
-import iconList from "./meta";
 
 @Component({
   components: {
@@ -29,10 +28,19 @@ import iconList from "./meta";
 export default class App extends Vue {
   query = ''
   group: Array<any> = []
-  allIcons: Array<any> = [...iconList]
+  iconList: Array<Record<string, string>> = window.__svg_icons__.map((item: string) => {
+    const fileName = item.split('/').pop() ?? '' // 获取文件名包括后缀
+    const fileNameWithoutExtension = fileName.split('.').slice(0, -1).join('.'); // 去掉后缀
+    return {
+      name: fileNameWithoutExtension,
+      path: item,
+    }
+  }) || []
+  allIcons: Array<Record<string, string>> = [...this.iconList]
   get icons() {
+    console.log()
     if (this.query) {
-      return iconList.filter((v) => {
+      return this.allIcons.filter((v) => {
         let name = v.name
         return name.includes(this.query)
       })
@@ -41,17 +49,20 @@ export default class App extends Vue {
     if (this.group.length > 0) {
       return this.group
     }
-    return iconList
+    return this.iconList
   }
   iconMeta: Array<Record<string, string>> = [];
   active = "home";
   created() {
-    this.iconMeta = iconList;
+    if (process.env.NODE_ENV === 'development') {
+      console.log(this.iconList)
+    }
+    this.iconMeta = this.iconList;
   }
 
   handleLeftChange(value: string, arr: Array<any>) {
     if (value === 'home') {
-      this.group = [...iconList]
+      this.group = [...this.iconList]
     } else {
       this.group = arr
     }

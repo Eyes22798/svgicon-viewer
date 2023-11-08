@@ -4,7 +4,7 @@ const yargs = require('yargs')
 const path = require('path')
 const fs = require('fs')
 const glob = require('glob')
-const serve = require('./serve')
+// const serve = require('./serve')
 const execa = require('execa')
 
 const args = yargs
@@ -20,9 +20,9 @@ const args = yargs
   .help('help')
   .alias('h', 'help').argv
 
-const svgFilePath = path.isAbsolute(args.svgFilePath)
-    ? args.svgFilePath
-    : path.join(process.cwd(), args.svgFilePath)
+const svgFilePath = path.isAbsolute(process.env.__SVG_ICON_PATH__)
+  ? process.env.__SVG_ICON_PATH__
+  : path.join(process.cwd(), process.env.__SVG_ICON_PATH__)
 
 ;(async function() {
   let files = glob.sync(path.join(svgFilePath, '**/*.svg'))
@@ -36,21 +36,21 @@ const svgFilePath = path.isAbsolute(args.svgFilePath)
   }
 
   const run = (bin, args, opts = {}) => execa(bin, args, { stdio: 'inherit', env: process.env, ...opts })
-  await run('yarn', ['clean'])
+  // await run('yarn', ['clean'])
   
-  process.chdir(path.join(__dirname, '../web'))
-  await run('yarn')
-  await run('yarn', ['build', `--path=${svgFilePath}`])
+  // process.chdir(path.join(__dirname, '../web'))
+  // await run('yarn')
+  await run('yarn', ['serve'])
 
   const injectCode = `
     window.icons = ${JSON.stringify(icons || [])}
   `
   const injectReg = /\/\*\{\{inject\}\}\*\//
   let html = fs.readFileSync(
-    path.join(__dirname, '../dist/index.html'),
+    path.join(__dirname, '../public/index.html'),
     'utf8'
   )
   html = html.replace(injectReg, injectCode)
-  console.clear()
-  serve(html)
+  // console.clear()
+  // serve(html)
 })()

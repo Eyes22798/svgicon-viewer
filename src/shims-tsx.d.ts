@@ -8,4 +8,7 @@ declare global {
       [elem: string]: any
     }
   }
+  interface Window {
+    __svg_icons__: IconMeta
+  }
 }
