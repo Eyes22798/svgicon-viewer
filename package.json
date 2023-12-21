@@ -21,11 +21,11 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "serve": "HOST=127.0.0.1 node .output/server/index.mjs",
-    "release:major": "standard-version --release-as major && git push --follow-tags origin master && npm publish",
-    "release:minor": "standard-version --release-as minor && git push --follow-tags origin master && npm publish",
-    "release:patch": "standard-version --release-as patch && git push --follow-tags origin master && npm publish",
-    "release:alpha": "standard-version --prerelease alpha && git push --follow-tags origin master && npm publish",
-    "release:beta": "standard-version --prerelease beta && git push --follow-tags origin master && npm publish"
+    "release:major": "standard-version --release-as major && git push --follow-tags origin main && npm publish",
+    "release:minor": "standard-version --release-as minor && git push --follow-tags origin main && npm publish",
+    "release:patch": "standard-version --release-as patch && git push --follow-tags origin main && npm publish",
+    "release:alpha": "standard-version --prerelease alpha && git push --follow-tags origin main && npm publish",
+    "release:beta": "standard-version --prerelease beta && git push --follow-tags origin main && npm publish"
   },
   "devDependencies": {
     "@iconify/json": "^2.2.159",

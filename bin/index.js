@@ -20,5 +20,5 @@ const args = yargs
 ;(async function() {
   const run = (bin, args, opts = {}) => execa(bin, args, { stdio: 'inherit', env: process.env, ...opts })
   await open('http://localhost:3000')
-  await run(`node`, ['.output/server/index.mjs', `--path=${args.path}`])
+  await run(`node`, ['./.output/server/index.mjs', `--path=${args.path}`])
 })()
