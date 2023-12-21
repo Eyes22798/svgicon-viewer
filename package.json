@@ -1,7 +1,8 @@
 {
   "name": "@eyes22798/svgicon-viewer",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "svgicon view",
+  "private": false,
   "bin": {
     "svgicon-viewer": "bin/index.js"
   },
@@ -12,55 +13,47 @@
     "icon",
     "preview"
   ],
-  "author": "helox",
-  "license": "ISC",
+  "files": [
+    ".output"
+  ],
   "scripts": {
-    "start": "node ./scripts/build.js",
-    "clean": "rimraf ./dist ./node_modules",
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "@eyes22798/svg-icon": "^1.0.14",
-    "clipboard": "^2.0.11",
-    "core-js": "^3.8.3",
-    "execa": "^4.1.0",
-    "glob": "7.1.6",
-    "node-polyfill-webpack-plugin": "^2.0.1",
-    "rimraf": "^4.1.2",
-    "vue": "^2.6.14",
-    "vue-class-component": "^7.2.3",
-    "vue-property-decorator": "^9.1.2",
-    "vuesax": "^4.0.1-alpha.25"
+    "dev": "nuxt dev --port 6636",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "serve": "HOST=127.0.0.1 node .output/server/index.mjs",
+    "postinstall": "nuxt prepare",
+    "release:major": "standard-version --release-as major && git push --follow-tags origin master && npm publish",
+    "release:minor": "standard-version --release-as minor && git push --follow-tags origin master && npm publish",
+    "release:patch": "standard-version --release-as patch && git push --follow-tags origin master && npm publish",
+    "release:alpha": "standard-version --prerelease alpha && git push --follow-tags origin master && npm publish",
+    "release:beta": "standard-version --prerelease beta && git push --follow-tags origin master && npm publish"
   },
   "devDependencies": {
-    "@types/jest": "^27.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.4.0",
-    "@typescript-eslint/parser": "^5.4.0",
-    "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-plugin-eslint": "~5.0.0",
-    "@vue/cli-plugin-typescript": "~5.0.0",
-    "@vue/cli-plugin-unit-jest": "~5.0.0",
-    "@vue/cli-service": "~5.0.0",
-    "@vue/eslint-config-typescript": "^9.1.0",
-    "@vue/test-utils": "^1.1.3",
-    "@vue/vue2-jest": "^27.0.0-alpha.2",
-    "babel-jest": "^27.0.6",
-    "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.3",
-    "jest": "^27.0.5",
-    "sass": "^1.32.7",
-    "sass-loader": "^12.0.0",
+    "@iconify/json": "^2.2.159",
+    "@nuxt/devtools": "latest",
+    "@pinia/nuxt": "^0.4.11",
+    "@unocss/nuxt": "^0.55.7",
+    "@unocss/reset": "^0.55.7",
+    "@vueuse/nuxt": "^10.7.0",
+    "nuxt": "^3.8.2",
+    "sass": "^1.69.5",
     "standard-version": "^9.5.0",
-    "ts-jest": "^27.0.4",
-    "typescript": "~4.5.5",
-    "vue-template-compiler": "^2.6.14",
-    "yargs": "13.2.1"
+    "unplugin-icons": "^0.17.4",
+    "unplugin-vue-components": "^0.25.2"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org",
-    "access": "public"
+  "dependencies": {
+    "execa": "^4.1.0",
+    "fs-extra": "^11.2.0",
+    "open": "^8.4.0",
+    "pinia": "^2.1.7",
+    "svgo": "^3.1.0",
+    "vue-i18n": "^9.8.0",
+    "vue3-clipboard": "^1.0.0"
+  },
+  "standard-version": {
+    "scripts": {
+      "postbump": "pnpm build"
+    }
   }
 }
