@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.8](https://github.com/Eyes22798/svgicon-viewer/compare/v2.0.7...v2.0.8) (2023-12-21)
+
+
+### Bug Fixes
+
+* deps error ([59769ed](https://github.com/Eyes22798/svgicon-viewer/commit/59769ed436ddc08b181bd7777400cdeee0c439c7))
+
 ### [2.0.7](https://github.com/Eyes22798/svgicon-viewer/compare/v2.0.6...v2.0.7) (2023-12-21)
 
 
