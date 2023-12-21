@@ -21,7 +21,6 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "serve": "HOST=127.0.0.1 node .output/server/index.mjs",
-    "postinstall": "nuxt prepare",
     "release:major": "standard-version --release-as major && git push --follow-tags origin master && npm publish",
     "release:minor": "standard-version --release-as minor && git push --follow-tags origin master && npm publish",
     "release:patch": "standard-version --release-as patch && git push --follow-tags origin master && npm publish",
