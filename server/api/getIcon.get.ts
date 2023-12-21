@@ -49,7 +49,9 @@ async function readFilesRecursive(folderPath: string) {
 const svgPath = yargs(process.argv.slice(2)).argv.path
 
 export default defineEventHandler(async (event): Promise<Files[]> => {
-  const folderPath = svgPath ? resolve(svgPath) : path.resolve(process.cwd(), './assets'); // 本地文件夹的路径
+  const folderPath = svgPath
+    ? path.isAbsolute(svgPath) ? svgPath : resolve(svgPath)
+    : path.resolve(process.cwd(), './assets'); // 本地文件夹的路径
   const files = await readFilesRecursive(folderPath)
 
   return files

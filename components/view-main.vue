@@ -19,10 +19,10 @@ import { ref, toRaw, computed } from 'vue'
 const query = ref('')
 const iconGroups = ref<Array<Files>>([])
 
-const { data, refresh, pending } = await useFetch('/api/getIcon')
+const { data } = await useFetch('/api/getIcon')
 const allIcons = [] as Array<Files>
 
-;(data.value as Array<Array<Files>>).forEach((groups: Array<Files>) => {
+;(data.value as unknown as Array<Array<Files>>).forEach((groups: Array<Files>) => {
   if (groups instanceof Array) {
     groups.forEach((icon) => {
       allIcons.push(toRaw(icon))
@@ -49,11 +49,11 @@ const handleLeftChange = (value: string, arr: Array<string>) => {
   if (value === 'home') {
     iconGroups.value = allIcons
   } else {
-    const filterIcons = [] as unknown as Array<Files>
+    const filterIcons = [] as unknown as Array<Files | undefined>
     arr.forEach((item) => {
       filterIcons.push(allIcons.find((icon) => icon.name === item))
     })
-    iconGroups.value = filterIcons
+    iconGroups.value = filterIcons as unknown as Array<Files>
   }
 }
 </script>

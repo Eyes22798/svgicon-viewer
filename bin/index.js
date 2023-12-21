@@ -17,6 +17,8 @@ const args = yargs
   .help('help')
   .alias('h', 'help').argv
 
+  const svgFilePath = args.path
+
   const resolve = (context) => {
     return path.join(__dirname, context)
   }
@@ -24,9 +26,9 @@ const args = yargs
 ;(async function() {
   const run = (bin, args, opts = {}) => execa(bin, args, { stdio: 'inherit', env: process.env, ...opts })
 
-  process.chdir(path.join(path.join(__dirname, '../.output/server')))
-  await run('pnpm', ['install'])
-  process.chdir(path.join(path.join(__dirname, '../')))
+  // process.chdir(path.join(__dirname, '../.output/server'))
+  // await run('pnpm', ['install'])
+  // process.chdir(path.join(__dirname, '../'))
   await open('http://localhost:3000')
-  await run(`node`, [resolve('../.output/server/index.mjs'), `--path=${args.path}`])
+  await run(`node`, [resolve('../.output/server/index.mjs'), `--path=${svgFilePath}`])
 })()
