@@ -18,12 +18,12 @@ const args = yargs
   .alias('h', 'help').argv
 
   const resolve = (context) => {
-    return path.join(process.cwd(), context)
+    return path.join(__dirname, context)
   }
 
 ;(async function() {
   const run = (bin, args, opts = {}) => execa(bin, args, { stdio: 'inherit', env: process.env, ...opts })
   await open('http://localhost:3000')
 
-  await run(`node`, [resolve('./.output/server/index.mjs'), `--path=${args.path}`])
+  await run(`node`, [resolve('../.output/server/index.mjs'), `--path=${args.path}`])
 })()
