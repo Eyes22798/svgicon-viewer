@@ -4,13 +4,12 @@ Preview SVG files from any folder
 <img decoding="async" src="https://github.com/Eyes22798/svgicon-viewer/blob/main/assets/preview.png">
 
 ## Installation
-Using NPM:
+Using PNPM:
 ```shell
-npm install @eyes22798/svgicon-viewer --global
+pnpm i -g @eyes22798/svgicon-viewer
 ```
 
 ## Usage
-In your main.js file:
 ```shell
 # svgicon-viewer <svgFilePath>
 svgicon-viewer ./src/assets/svg
