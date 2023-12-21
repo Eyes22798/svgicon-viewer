@@ -2,6 +2,7 @@
 const open = require('open')
 const yargs = require('yargs')
 const execa = require('execa')
+const path = require('path')
 
 const args = yargs
   .usage(
@@ -16,8 +17,13 @@ const args = yargs
   .help('help')
   .alias('h', 'help').argv
 
+  const resolve = (context) => {
+    return path.join(process.cwd(), context)
+  }
+
 ;(async function() {
   const run = (bin, args, opts = {}) => execa(bin, args, { stdio: 'inherit', env: process.env, ...opts })
   await open('http://localhost:3000')
-  await run(`node`, ['./.output/server/index.mjs', `--path=${args.path}`])
+
+  await run(`node`, [resolve('./.output/server/index.mjs'), `--path=${args.path}`])
 })()
