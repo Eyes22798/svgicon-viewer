@@ -1,15 +1,10 @@
 import fs from 'fs-extra'
 import yargs from 'yargs'
-import glob from 'glob'
 import path from 'path'
 
 interface Files {
   name: string
   content: string
-}
-
-const resolve = (context: string) => {
-  return path.join(process.cwd(), context)
 }
 
 async function readFilesRecursive(folderPath: string) {
@@ -50,7 +45,7 @@ const svgPath = yargs(process.argv.slice(2)).argv.path
 
 export default defineEventHandler(async (event): Promise<Files[]> => {
   const folderPath = svgPath
-    ? path.isAbsolute(svgPath) ? svgPath : resolve(svgPath)
+    ? path.isAbsolute(svgPath) ? svgPath : path.resolve(svgPath)
     : path.resolve(process.cwd(), './assets'); // 本地文件夹的路径
   const files = await readFilesRecursive(folderPath)
 
