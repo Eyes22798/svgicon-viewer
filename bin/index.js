@@ -18,6 +18,8 @@ const args = yargs
   .alias('h', 'help').argv
 
   const svgFilePath = args.path
+    ? path.isAbsolute(args.path) ? args.path : path.resolve(args.path)
+    : path.resolve(process.cwd(), './assets'); // 本地文件夹的路径
 
   const resolve = (context) => {
     return path.join(__dirname, context)
