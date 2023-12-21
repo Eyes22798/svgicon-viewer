@@ -1,6 +1,6 @@
 {
   "name": "@eyes22798/svgicon-viewer",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "description": "svgicon view",
   "private": false,
   "bin": {

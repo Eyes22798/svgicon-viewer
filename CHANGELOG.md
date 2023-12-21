@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.10](https://github.com/Eyes22798/svgicon-viewer/compare/v2.0.9...v2.0.10) (2023-12-21)
+
+
+### Bug Fixes
+
+* process chdir error ([7fb6dc5](https://github.com/Eyes22798/svgicon-viewer/commit/7fb6dc5a2ccc7743c9b6b67a50272cccc127c563))
+
 ### [2.0.9](https://github.com/Eyes22798/svgicon-viewer/compare/v2.0.8...v2.0.9) (2023-12-21)
 
 
