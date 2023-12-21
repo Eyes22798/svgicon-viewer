@@ -6,7 +6,6 @@
   "bin": {
     "svgicon-viewer": "bin/index.js"
   },
-  "main": "bin/index.js",
   "keywords": [
     "vue",
     "svg",
@@ -18,7 +17,7 @@
   ],
   "scripts": {
     "dev": "nuxt dev --port 6636",
-    "build": "nuxt build",
+    "build": "nuxt build --mode prod",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "serve": "HOST=127.0.0.1 node .output/server/index.mjs",
