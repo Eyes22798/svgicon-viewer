@@ -26,9 +26,9 @@ const args = yargs
 ;(async function() {
   const run = (bin, args, opts = {}) => execa(bin, args, { stdio: 'inherit', env: process.env, ...opts })
 
-  // process.chdir(path.join(__dirname, '../.output/server'))
-  // await run('pnpm', ['install'])
-  // process.chdir(path.join(__dirname, '../'))
+  process.chdir(path.join(__dirname, '../.output/server'))
+  await run('pnpm', ['install'])
+  process.chdir(path.join(__dirname, '../'))
   await open('http://localhost:3000')
   await run(`node`, [resolve('../.output/server/index.mjs'), `--path=${svgFilePath}`])
 })()
