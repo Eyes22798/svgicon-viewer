@@ -1,8 +1,7 @@
 #!/usr/bin/env node
-
+const open = require('open')
 const yargs = require('yargs')
 const execa = require('execa')
-const open = require('open')
 
 const args = yargs
   .usage(
@@ -19,7 +18,6 @@ const args = yargs
 
 ;(async function() {
   const run = (bin, args, opts = {}) => execa(bin, args, { stdio: 'inherit', env: process.env, ...opts })
-  await run('pnpm', ['install'])
   await open('http://localhost:3000')
   await run(`node`, ['./.output/server/index.mjs', `--path=${args.path}`])
 })()
