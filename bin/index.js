@@ -31,6 +31,7 @@ const args = yargs
   process.chdir(path.join(__dirname, '../.output/server'))
   await run('pnpm', ['install'])
   process.chdir(path.join(__dirname, '../'))
+  console.clear()
   await open('http://localhost:3000')
   await run(`node`, [resolve('../.output/server/index.mjs'), `--path=${svgFilePath}`])
 })()
