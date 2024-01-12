@@ -25,7 +25,7 @@ async function readFilesRecursive(folderPath: string) {
             const content = await fs.readFile(fullPath, 'utf8');
             const fileName = entry.name.split('/').pop() ?? '' // 获取文件名包括后缀
             const name = fileName.split('.').slice(0, -1).join('.'); // 去掉后缀
-            return { name, content, fullPath };
+            return { name, content, fullPath, sep: path.sep };
           } else {
             // 不是SVG文件，返回空对象表示跳过
             return {};

@@ -19,7 +19,7 @@ const groups = computed(() => {
     const result: Record<string, Array<any>> = {};
     for (let i = 0; i < data.length; i++) {
       const path = data[i].fullPath;
-      const parts = path.split("/");
+      const parts = path.split(data[i].sep);
       const directory = parts[parts.length - 2];
       const icon = data[i].name;
       if (result[directory]) {
@@ -28,7 +28,6 @@ const groups = computed(() => {
         result[directory] = [icon];
       }
     }
-    console.log(result)
     return result;
   };
 
