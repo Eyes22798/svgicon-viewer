@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.14](https://github.com/Eyes22798/svgicon-viewer/compare/v2.0.13...v2.0.14) (2024-01-12)
+
+
+### Bug Fixes
+
+* icon group & open error ([a3b51ce](https://github.com/Eyes22798/svgicon-viewer/commit/a3b51ce590c8bf15d99fa0284ffc58d751db9287))
+
 ### [2.0.13](https://github.com/Eyes22798/svgicon-viewer/compare/v2.0.12...v2.0.13) (2023-12-26)
 
 ### [2.0.12](https://github.com/Eyes22798/svgicon-viewer/compare/v2.0.11...v2.0.12) (2023-12-21)
