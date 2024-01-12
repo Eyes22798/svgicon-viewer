@@ -31,9 +31,6 @@ dependencies:
     version: 13.2.1
 
 devDependencies:
-  '@iconify/json':
-    specifier: ^2.2.159
-    version: 2.2.159
   '@nuxt/devtools':
     specifier: latest
     version: 1.0.6(nuxt@3.8.2)(vite@4.5.1)
@@ -837,13 +834,6 @@ packages:
   /@hutson/parse-repository-url@3.0.2:
     resolution: {integrity: sha512-H9XAx3hc0BQHY6l+IFSWHDySypcXsvsuLhgYLUGywmJ5pswRVQJUHpOsobnLYp2ZUaUlKiKDrgWWhosOwAEM8Q==}
     engines: {node: '>=6.9.0'}
-    dev: true
-
-  /@iconify/json@2.2.159:
-    resolution: {integrity: sha512-Hoc9gxrq3kqdWkdV7ZCpIgOrCgWtOvjyEASmYGpB7PpnCyd3SRCVU0VSX3mEs66qqPRNJz5qwCFK2tmC9zaSLQ==}
-    dependencies:
-      '@iconify/types': 2.0.0
-      pathe: 1.1.1
     dev: true
 
   /@iconify/types@2.0.0:

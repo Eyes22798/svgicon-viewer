@@ -28,7 +28,6 @@
     "release:beta": "standard-version --prerelease beta && git push --follow-tags origin main && npm publish"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.159",
     "@nuxt/devtools": "latest",
     "@pinia/nuxt": "^0.4.11",
     "@unocss/nuxt": "^0.55.7",
