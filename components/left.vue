@@ -1,14 +1,12 @@
 <template>
-  <div>
-    <sidebar :absolute="true" v-model="active" :open="true">
-      <sidebar-item id="home"> 全部（{{ allIcons.length }}） </sidebar-item>
-      <sidebar-item v-for="(key, index) in Object.keys(groups)" :key="index" :id="key">{{ key }} （{{ groups[key].length }}）</sidebar-item>
-    </sidebar>
-  </div>
+  <sidebar :absolute="true" v-model="active" :open="true">
+    <sidebar-item id="home"> 全部（{{ allIcons.length }}） </sidebar-item>
+    <sidebar-item v-for="(key, index) in Object.keys(groups)" :key="index" :id="key">{{ key }} （{{ groups[key].length }}）</sidebar-item>
+  </sidebar>
 </template>
 
 <script lang="ts" setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import type { PropType } from 'vue'
 
 const props = defineProps({
@@ -30,6 +28,7 @@ const groups = computed(() => {
         result[directory] = [icon];
       }
     }
+    console.log(result)
     return result;
   };
 
@@ -42,7 +41,3 @@ watch(() => active.value, () => {
 })
 
 </script>
-
-<style scoped>
-
-</style>
