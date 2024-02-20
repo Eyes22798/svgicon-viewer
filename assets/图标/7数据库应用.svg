@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#路径_23441_00000121959540328596461770000001374232745485129367_);}
+	.st1{fill:url(#路径_23442_00000129928495317266754850000002731946853642960297_);}
+	.st2{fill:url(#路径_23443_00000044864955078581043450000005039372604088953239_);}
+</style>
+<g id="组_18291" transform="translate(5 5)">
+	
+		<linearGradient id="路径_23441_00000056387190842935412360000017112404860715944368_" gradientUnits="userSpaceOnUse" x1="-644.4023" y1="353.908" x2="-643.5353" y2="354.797" gradientTransform="matrix(21.988 0 0 -9.971 14167.9043 3533.6353)">
+		<stop  offset="0" style="stop-color:#4A6FE3"/>
+		<stop  offset="1" style="stop-color:#4294F0"/>
+	</linearGradient>
+	<path id="路径_23441" style="fill:url(#路径_23441_00000056387190842935412360000017112404860715944368_);" d="M7,6
+		c6.1,0,11-1.6,11-3.6v-2.8C18-2.4,13.1-4,7-4S-4-2.4-4-0.4v2.8C-4,4.4,0.9,6,7,6L7,6z"/>
+	
+		<linearGradient id="路径_23442_00000139998133074368918650000005166027761927844527_" gradientUnits="userSpaceOnUse" x1="-644.4727" y1="343.8265" x2="-643.6057" y2="344.7155" gradientTransform="matrix(21.988 0 0 -7.834 14167.9043 2704.0039)">
+		<stop  offset="0" style="stop-color:#4A6FE3"/>
+		<stop  offset="1" style="stop-color:#4294F0"/>
+	</linearGradient>
+	<path id="路径_23442" style="fill:url(#路径_23442_00000139998133074368918650000005166027761927844527_);" d="M7,11.9
+		c6.1,0,11-1.6,11-3.6V4.1c0,2-4.9,3.6-11,3.6S-4,6.1-4,4.1v4.3C-4,10.3,0.9,11.9,7,11.9z"/>
+	
+		<linearGradient id="路径_23443_00000139980918529989147150000007026591763887378060_" gradientUnits="userSpaceOnUse" x1="-644.4726" y1="343.8264" x2="-643.6056" y2="344.7154" gradientTransform="matrix(21.988 0 0 -7.834 14167.916 2710.062)">
+		<stop  offset="0" style="stop-color:#4A6FE3"/>
+		<stop  offset="1" style="stop-color:#4294F0"/>
+	</linearGradient>
+	<path id="路径_23443" style="fill:url(#路径_23443_00000139980918529989147150000007026591763887378060_);" d="M7,13.7
+		c-6.1,0-11-1.6-11-3.6v4.3c0,2,4.9,3.6,11,3.6s11-1.6,11-3.6v-4.3C18,12.1,13.1,13.7,7,13.7z"/>
+</g>
+</svg>
